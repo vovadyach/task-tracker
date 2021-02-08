@@ -1,13 +1,113 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.Container {
+  max-width: 31.25rem;
+  margin: 2rem auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 2rem;
+  border-radius: 0.25rem;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem
+}
+
+.Btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  margin: 0.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.Btn:focus {
+  outline: none;
+}
+
+.Btn:active {
+  transform: scale(0.98);
+}
+
+.BtnBlock {
+  display: block;
+  width: 100%;
+}
+
+.Task {
+  background: #f4f4f4;
+  margin: 0.25rem;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  border-left: 0.25rem solid transparent;
+}
+
+.Task.reminder {
+  border-color: green;
+}
+
+.Task h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.AddForm {
+  margin-bottom: 2.5rem;
+}
+
+.FormControl {
+  margin: 1.25rem 0;
+}
+
+.FormControl label {
+  display: block;
+}
+
+.FormControl input {
+  width: 100%;
+  height: 2.5rem;
+  margin: 0.25rem;
+  padding: 3px 7px;
+  font-size: 1.125rem;
+}
+
+.FormControlCheck {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.FormControlCheck label {
+  flex: 1;
+}
+
+.FormControlCheck input {
+  flex: 2;
+  height: 1.25rem;
+}
+
+footer {
+  margin-top: 1.75rem;
+  text-align: center;
 }
