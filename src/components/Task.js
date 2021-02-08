@@ -8,10 +8,10 @@ const Task = ({ task, onDelete, onToggle }) => {
     >
       <h3>
         {task.text}
-        <FaTimes
-          onClick={() => onDelete(task.id)}
+        <button className="BtnIcon" onClick={() => onDelete(task.id)}><FaTimes
           style={{ color: 'red', cursor: 'pointer' }}
-        />
+        /></button>
+        
       </h3>
       <p>{task.day}</p>
     </div>

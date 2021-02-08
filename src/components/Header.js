@@ -1,25 +1,25 @@
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-const Header = ({ title }) => {
-  const onClick = (e) => {
-    console.log(e.target);
-  };
-
+const Header = ({ title, onAdd, showAddTask }) => {
   return (
-    <header className="Header">
+    <header className='Header'>
       <h1>{title}</h1>
-      <Button color="#ccc" text="Add" onClick={onClick} />
+      <Button
+        color={showAddTask ? '#ff0800' : '#008000'}
+        text={showAddTask ? 'Hide Form' : 'Show Form'}
+        onClick={onAdd}
+      />
     </header>
-  )
-}
+  );
+};
 
 Header.defaultProps = {
-  title: 'Task Tracker'
-}
+  title: 'Task Tracker',
+};
 
 Header.propTypes = {
-  title: PropTypes.string.isRequired
-}
+  title: PropTypes.string.isRequired,
+};
 
-export default Header
+export default Header;

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
 * {
   box-sizing: border-box;
@@ -6,25 +6,33 @@
   padding: 0;
 }
 
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: #efefef;
 }
 
 .Container {
-  max-width: 31.25rem;
+  max-width: 35.25rem;
   margin: 2rem auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
+  background-color: #fff;
   padding: 2rem;
   border-radius: 0.25rem;
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
+    rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
 }
 
 .Header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem
+  margin-bottom: 1.5rem;
 }
 
 .Btn {
@@ -33,7 +41,6 @@ body {
   color: #fff;
   border: none;
   padding: 0.75rem 1.25rem;
-  margin: 0.25rem;
   border-radius: 0.25rem;
   cursor: pointer;
   text-decoration: none;
@@ -41,15 +48,11 @@ body {
   font-family: inherit;
 }
 
-.Btn:focus {
-  outline: none;
-}
-
 .Btn:active {
   transform: scale(0.98);
 }
 
-.BtnBlock {
+.Btn--block {
   display: block;
   width: 100%;
 }
@@ -82,29 +85,55 @@ body {
 
 .FormControl label {
   display: block;
+  margin-bottom: 0.25rem;
 }
 
 .FormControl input {
   width: 100%;
   height: 2.5rem;
-  margin: 0.25rem;
   padding: 3px 7px;
   font-size: 1.125rem;
+  border: 1px solid slategrey;
 }
 
-.FormControlCheck {
+.FormControl--check {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.FormControlCheck label {
+.FormControl--check label {
   flex: 1;
 }
 
-.FormControlCheck input {
+.FormControl--check input {
   flex: 2;
   height: 1.25rem;
+}
+
+.FormControl.has-error input {
+  border-color: red;
+}
+
+.ErrorMessage {
+  color: red;
+  font-weight: 500;
+}
+.is-disabled,
+:disabled {
+  pointer-events: none;
+  opacity: 0.67;
+}
+
+.BtnIcon {
+  border: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  display: inline-flex;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
 }
 
 footer {
